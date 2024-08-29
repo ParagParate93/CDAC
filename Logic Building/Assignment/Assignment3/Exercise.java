@@ -445,10 +445,16 @@ z= 6 + 7 - 5 - 5 + 4 = 7
 
 /* 17
 
+* * * * *
+ * * * *
+  * * *
+   * *
+    *
+	
 */
 
-/*
-class Exercise{
+
+/* class Exercise{
 	public static void main(String args[]){
 		for(int i=1; i<=5; i++){
 			for(int s=1; s<i; s++){
@@ -462,20 +468,275 @@ class Exercise{
 		}
 		
 	}
-}*/
+}
+ */
+ 
+ 
+/* 18
+https://www.geeksforgeeks.org/java-program-to-print-diamond-shape-star-pattern/
 
-class Exercise{
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+
+*/
+
+
+/* class Exercise{
 	public static void main(String args[]){
-		for(int i=1; i<=5; i++){
-			for(int s=1; s<i; s++){
-				System.out.print(" ");				
+		
+		for(int i=1; i<=4; i++){
+			for(int s=1; s<=4-i; s++){
+				System.out.print(" ");
 			}
-			for(int j=i; j<=5; j++){
+			for(int j=1; j<=(i*2)-1; j++){
 				System.out.print("*");
 			}
 			System.out.println();
+		}
+		 
+		for(int m=3; m>=1; m--){ //**
+			for(int s1=1; s1<=(4-m); s1++){  //**
+				System.out.print(" ");
+			}
+			for(int n=1; n<=(2*m)-1; n++){
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+ */
+ 
+ 
+/*
+25
 
+1
+12
+123
+1234
+12345
+
+*/ 
+
+/* class Exercise{
+	public static void main(String args[]){
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=i; j++){
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+		
+	}
+} */
+
+/*
+24
+
+1
+22
+333
+4444
+55555
+*/
+
+/* class Exercise{
+	public static void main(String args[]){
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=i; j++){
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+		
+	}
+} */
+
+/*
+23
+
+11111
+22222
+33333
+44444
+55555
+*/
+
+/* class Exercise{
+	public static void main(String args[]){
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=5; j++){
+				System.out.print(i);
+			}
+			System.out.println();
 		}
 		
 	}
 }
+ */
+
+/*
+26
+
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+*/
+
+
+/* class Exercise{
+	public static void main(String args[]){
+		int num=0;
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=i; j++){
+				num++;
+				System.out.print(num+" ");
+			}
+			System.out.println();
+		}
+		
+	}
+}
+ */
+ 
+/*
+19.
+
+1
+1*2
+1*2*3
+1*2*3*4
+1*2*3*4*5
+
+*/
+ 
+ 
+/* class Exercise{
+	public static void main(String args[]){
+		
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=i; j++){
+				if(j==i){
+					System.out.print(j);
+					break;
+				}
+				System.out.print(j+"*");
+			}
+			System.out.println();
+		}
+		
+	}
+}
+ */
+
+/*
+20
+
+5
+5*4
+5*4*3
+5*4*3*2
+5*4*3*2*1
+*/ 
+ 
+/* class Exercise{
+	public static void main(String args[]){
+		
+		for(int i=5; i>=1; i--){
+			for(int j=5; j>=i; j--){
+				if(j==5){
+					System.out.print(j);
+					continue;    //instead of break(break loop) it should be continue (next iteration).
+				}
+				System.out.print("*"+j);
+			}
+			System.out.println();
+		}
+		
+	}
+} 
+
+ */
+
+/*
+
+*/
+
+/*
+21
+
+1
+1*3
+1*3*5
+1*3*5*7
+1*3*5*7*9
+*/
+
+ 
+/* class Exercise{
+	public static void main(String args[]){
+		
+		for(int i=1; i<=5; i++){
+			for(int j=1; j<=5; j++){
+				if(j==i){
+					System.out.print(((2*j)-1));
+					break;
+				}
+				System.out.print(((2*j)-1)+"*");
+			}
+			System.out.println();
+		}
+		
+	}
+}
+ */
+
+
+/*
+22 ******
+
+*********
+ *******
+  *****
+   ***
+    *
+   ***
+  *****
+ *******
+*********
+
+*/
+
+class Exercise{
+	public static void main(String args[]){
+		for(int d=5; d>=1; d--){  // d for down 
+			for(int r=5; r>d; r--){ //for printing spaces or int s**
+				System.out.print(" ");
+			}
+			for(int c=1; c<=(d*2)-1; c++ ){ // for printing * (r -row, c-column)
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		for(int u=4; u>=1; u--){    // u for upper
+			for(int r=1; r<u; r++){ //for printing spaces or int s**
+				System.out.print(" ");
+			}
+			for(int c=1; c<=((4-u)*2)+3; c++ ){ // for printing * (r -row, c-column)
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
