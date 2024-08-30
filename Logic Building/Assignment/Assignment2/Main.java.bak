@@ -268,7 +268,7 @@ https://www.javatpoint.com/java-reserved-keywords
 
 */
 
-public class Main {
+/* public class Main {
 public static void display() { // added static
 System.out.println("No parameters");
 }
@@ -279,7 +279,7 @@ public static void main(String[] args) {
 display();
 display(5);
 }
-}
+} */
 
 /*
 What happens when you compile and run this code? Is method overloading 
@@ -309,6 +309,371 @@ The compilation error Non-static method … cannot be referenced from a static
  block, or the main() method, which is always static.
 
 
+*/
+
+
+//Snippet 11:
+
+/* public class Main {
+public static void main(String[] args) {
+int[] arr = {1, 2, 3};
+System.out.println(arr[1]); // allowed values for index are 0, 1, 2
+}
+} */
+
+/*
+What runtime exception do you encounter? Why does it occur?
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 3
+        at Main.main(Main.java:320)
+		
+ArrayIndexOutOfBoundsException occurs when we access an array, or a Collection, 
+that is backed by an array with an invalid index. This means that the index is 
+either less than zero or greater than or equal to the size of the array.
+
+Additionally, bound checking happens at runtime. So, ArrayIndexOutOfBoundsException
+ is a runtime exception. Therefore, we need to be extra careful when accessing the 
+ boundary elements of an array.
+
+Ref: https://www.baeldung.com/java-arrayindexoutofboundsexception
+*/
+
+//Snippet 12:
+
+/* public class Main {
+public static void main(String[] args) {
+	boolean i = true; // added
+while (i) { // i added
+System.out.println("Infinite Loop");
+i = false; // set i to false to stop loop
+}
+}
+}
+ */
+
+/*
+
+What happens when you run this code? How can you avoid infinite loops?
+
+Infinite Loop is printed infinitely. To avoid infinite loop the condition in while 
+loop should evaluate to false.
 
 
 */
+
+//Snippet 13:
+
+/* public class Main {
+public static void main(String[] args) {
+String str = "parag"; // changed from null to a string value
+System.out.println(str.length());
+}
+}
+ */
+ 
+/*
+
+ What exception is thrown? Why does it occur?
+ Exception in thread "main" java.lang.NullPointerException: Cannot invoke 
+ "String.length()" because "<local1>" is null
+        at Main.main(Main.java:368)
+ 
+The NullPointerException occurs when an uninitialized variable is used. Such a 
+variable has no object reference and does not point anywhere. Therefore, it has a 
+null value in Java and using it throws a NullPointerException.
+
+Some of the most common scenarios for a NullPointerException are:
+
+Calling methods on a null object **CASE HERE
+Accessing a null object’s properties
+Accessing an index element (like in an array) of a null object
+Passing null parameters to a method
+Incorrect configuration for dependency injection frameworks like Spring
+Using synchronized on a null object
+Throwing null from a method that throws an exception
+
+ */
+
+
+// Snippet 14:
+
+
+/* public class Main {
+public static void main(String[] args) {
+double num = 16.03; // changed "Hello"
+System.out.println(num);
+}
+} */
+
+
+/*
+
+What compilation error occurs? Why does Java enforce data type constraints?
+
+Main.java:402: error: incompatible types: String cannot be converted to double
+double num = "Hello";
+
+While it is possible to convert to and from certain types with relative ease, like 
+converting a char to an int and vice versa with type casting [2], it is not very 
+straightforward to convert between other types, such as between certain primitive 
+and reference types, like converting a String to an int, or one user-defined type 
+to another. In fact, many of these cases would be indicative of a logical error 
+and require careful consideration as to what is being converted and how, or whether 
+the conversion is warranted in the first place.
+
+The incompatible types error indicates a situation where there is some expression 
+that yields a value of a certain data type different from the one expected. This 
+error implies that the Java compiler is unable to resolve a value assigned to a 
+variable or returned by a method, because its type is incompatible with the one 
+declared on the variable or method in question. Incompatible, in this context, 
+means that the source type is both different from and unconvertible (by means of 
+automatic type casting) to the declared type.
+
+Ref: https://rollbar.com/blog/how-to-handle-the-incompatible-types-error-in-java/
+
+These annotations are typically used to improve code readability and catch 
+type-related errors at compile time. 
+
+*/
+
+
+//Snippet 15:
+
+/* public class Main {
+public static void main(String[] args) {
+int num1 = 10;
+double num2 = 5.5;
+int result = num1 + (int)num2; // explicit type casting 
+System.out.println(result);
+}
+} */
+
+/*
+
+What error occurs when compiling this code? How should you handle different data types
+in operations?
+
+Main.java:445: error: incompatible types: possible lossy conversion from double to 
+int
+int result = num1 + num2;
+
+different data types in operations can be handled by 
+1. Implicit Type Casting
+2. Explicit type casting
+
+*/
+
+
+//Snippet 16:
+
+/* public class Main {
+public static void main(String[] args) {
+int num = 10;
+double result = num / 4;
+System.out.println(result);
+}
+} */
+
+/*
+What is the result of this operation? Is the output what you expected?
+
+The output of the program is 2.0. 
+
+It is because both 10 and 4 are integers so the 
+result of division is 2. Since we are storing this value into a variable of type 
+double, therefore .0 gets added into it.
+
+*/
+
+//Snippet 17:
+
+/* public class Main {
+public static void main(String[] args) {
+int a = 10;
+int b = 5;
+double result = Math.pow(a,b);
+System.out.println(result);
+}
+}
+ */
+
+/*
+100000.0
+
+What compilation error occurs? Why is the ** operator not valid in Java?
+
+error: illegal start of expression
+int result = a ** b;
+
+** operator is not recognised in java, Math.pow() method can be used for 
+exponents in java
+
+Why is the ** operator not valid in Java?
+Because java is a simple language that does not include ambiguous stuffs like 
+operator overloading , multiple inheritance, Etc. 
+
+*/
+
+//Snippet 18:
+
+/* public class Main {
+public static void main(String[] args) {
+int a = 10;
+int b = 5;
+int result = a + b * 2;
+System.out.println(result);
+}
+} */
+
+
+/*
+
+What is the output of this code? How does operator precedence affect the result?
+
+20
+BODMAS
+The operators having higher precedence are evaluated first. If we want to evaluate 
+lower precedence operators first, we must group operands by using parentheses and 
+then evaluate.
+
+*/
+
+//Snippet 19:
+
+/* public class Main {
+public static void main(String[] args) {
+float a = 10;
+int b = 0;
+float result = a / b;
+System.out.println(result);
+}
+} */
+
+/*
+
+What runtime exception is thrown? Why does division by zero cause an issue in Java?
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Main.main(Main.java:546)
+		
+integer division by zero throw an exception, while floating-point division by zero 
+does not?
+
+Let’s look at this from a memory representation perspective. For integers, there is 
+no bit pattern that can be used to store the result of such an operation, while 
+floating-point numbers have values like NaN or INFINITY to be used in cases like 
+these.
+
+Now, let’s consider the binary representation of a float as SEEEEEEE EFFFFFFF 
+FFFFFFFF FFFFFFFF with one bit (S) for the sign, 8 bits (E) for the exponent, and 
+the rest (F) for the mantissa.
+
+In each of the three values NaN, POSITIVE_INFINITY, and NEGATIVE_INFINITY, 
+all bits in the exponent part are set to 1.
+
+INFINITY has the mantissa bits all set to 0, while NaN has a non-zero mantissa.
+
+Ref: https://www.baeldung.com/java-division-by-zero#:~:text=To%20sum%20things%20up%2C%20in,double%2C%20Java%20allows%20the%20operation.
+		
+*/
+
+//Snippet 20:
+
+/* public class Main {
+public static void main(String[] args) {
+System.out.println("Hello, World");
+}
+} */
+
+/*
+What syntax error occurs? How does the missing semicolon affect compilation?
+
+ error: ';' expected
+System.out.println("Hello, World")
+
+Every statement in a Java program must end with a semicolon.
+
+Not every line of Java code is a statement. A class declaration is not considered 
+a statement, so it is not followed by a semicolon. Likewise, a method declaration 
+also is not considered a statement and requires no semicolon.
+
+*/
+
+
+//Snippet 21:
+
+/* public class Main {
+public static void main(String[] args) {
+System.out.println("Hello, World!");
+}// Missing closing brace here
+} */
+
+/*
+What does the compiler say about mismatched braces?
+ error: reached end of file while parsing
+}
+ ^
+ 
+*/
+
+
+//Snippet 22:
+
+/* public class Main {
+public static void main(String[] args) {
+	displayMessage();
+}
+
+static void displayMessage() {  // method can't be declared inside other method but it can be called from other method. 
+	System.out.println("Message");
+	}
+} */
+
+/*
+What syntax error occurs? Can a method be declared inside another method?
+
+ error: illegal start of expression
+static void displayMessage() {
+^
+Main.java:627: error: class, interface, enum, or record expected
+}
+^
+2 errors
+
+No, Java does not support directly nested methods like some other languages 
+(e.g., Python). However, you can achieve similar functionality using the following 
+approaches:
+1. Local Classes (Java 7 and earlier): You can’t declare a metho directly within a 
+method but you can declare a whole class within the scope of a method and that 
+class can have as many methods as it likes.
+
+2. Lambda Expressions (Java 8 and later):
+
+*/
+
+
+//Snippet 23:
+
+public class Main {  //changed name from Confusion to Main so as to keep it in same file and execute.
+public static void main(String[] args) {
+int value = 2;
+switch(value) {
+case 1:
+System.out.println("Value is 1");
+case 2:
+System.out.println("Value is 2");
+case 3:
+System.out.println("Value is 3");
+default:
+System.out.println("Default case");
+}
+}
+}
+
+/*
+
+Error to Investigate: Why does the default case print after "Value is 2"? How can 
+you prevent the program from executing the default case?
+
+
+*/
+
