@@ -18,7 +18,7 @@ class Q1{
 			}
 			n++;
 		}while((number=number/10) != 0);
-		System.out.println(n);
+		//System.out.println(n);
 		
 		while(value!=0){
 			int rem = value%10;
@@ -27,10 +27,10 @@ class Q1{
 		}
 		
 		if(compare == sum){
-			System.out.println("Armstrong");
+			System.out.println("true");
 		}
 		else{
-			System.out.println("Not Armstrong number");
+			System.out.println("false");
 		}
 		sc.close();
 		
@@ -38,6 +38,21 @@ class Q1{
 }
 
 /*
+
+C:\Users\91916\Downloads\Assig1>java Q1
+Enter the number
+153
+true
+
+C:\Users\91916\Downloads\Assig1>java Q1
+Enter the number
+123
+false
+
+
+
+
+
 Enter the number
 12
 2

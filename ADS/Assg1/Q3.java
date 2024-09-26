@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Q3{
 	public static int Fact(int value){
-		if(value ==1){
+		if(value <=1){
 			return 1;
 		}
 		int op = value * Fact(value-1);
@@ -28,6 +28,12 @@ C:\Users\91916\Downloads>java Q3
 Enter the number
 5
 Factorial is : 120
+
+C:\Users\91916\Downloads\Assig1>java Q3
+Enter the number
+0
+Factorial is : 1
+
 
 C:\Users\91916\Downloads>java Q3
 Enter the number

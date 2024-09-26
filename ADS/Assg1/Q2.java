@@ -14,16 +14,29 @@ class Q2{
 			}
 		}
 		if(prime == 0){
-			System.out.println("Prime");
+			System.out.println("true");
 		}
 		else{
-			System.out.println("Not Prime");
+			System.out.println("false");
 		}
 		
 	}
 }
 
 /*
+
+C:\Users\91916\Downloads\Assig1>java Q2
+Enter the number
+29
+true
+
+C:\Users\91916\Downloads\Assig1>java Q2
+Enter the number
+15
+false
+
+
+
 
 C:\Users\91916\Downloads>java Q2
 Enter the number
