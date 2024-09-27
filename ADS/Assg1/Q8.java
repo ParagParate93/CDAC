@@ -16,7 +16,7 @@ public class Q8{
         if (result != '\0') {
             System.out.println("First non-repeated character: '" + result + "'");
         } else {
-            System.out.println("No non-repeated character found.");
+            System.out.println("null");
         }
     }
 
@@ -43,6 +43,15 @@ public class Q8{
 
 /*
 
+C:\Users\91916\Downloads\Assig1>java Q8
+Enter a string: stress
+First non-repeated character: 't'
+
+C:\Users\91916\Downloads\Assig1>java Q8
+Enter a string: aabbcc
+null
 
 */
+
+
 
