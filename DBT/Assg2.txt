@@ -1,0 +1,33 @@
+Which field of the Customers table is the primary key?
+The primary key for the Customers table is the Cnum field, as it typically serves to uniquely identify each customer.
+
+What is the 4th column of the Customers table?
+The 4th column of the Customers table is Rating.
+
+What is another word for row? For column?
+Another word for row is record, and another word for column is field or attribute.
+- Row - tuple, entity | Column - attribute, key
+
+
+Why isn’t it possible to see the first five rows of a table?
+*  In a DBMS, data is stored inside a file
+*  Inside a file, rows are stored squentially
+*  In DBMS, there is concept of the row numbering
+*  In RDBMS table, is not a like that every row is a file
+*  In RDBMS, rows of the table are not stored sequentially; they are stored in any specific order
+*  Rows of the table are scattered (fragmentated) all over the DB
+*  The reason why RDBMS does this to speed up the INSERT statement
+*  In a multi-user environment, when multiple users are inserting rows in the same table simulteneously, if MySQL were to store the rows sequentially, then the INSERT operations would be very slow
+* When you INSERT a table , wherever MySQL finds the free space in the DB Server HD, it will store row there
+* When you select from a table, the order of the rows in the output depends on the row address; it will be in asending order of row address
+* Once you INSERT a row, the row address is constant
+* When you update a row, if the row length is increaing and the free space is not available, then the entire row is moved to some other address on the DB Server HD
+* Later when you SELECT from the table, you may see that row at some other location
+* Its only in the case of VARCHAR that the row length may increase or decrease
+* Hence it is not possible to see the first 'N' rows of table, or the last 'N' rows of a table
+* This is common for all RDBMS
+* There is a system table which stores all the tablenames and their respective row addresses
+* When you select from a table, MySQL will not search the entire DB Server HD; rather it will go to that system table, and retrieve the rows of the SELECTED table accordingly 
+
+- Because the data is not saved in the order of insertion.
+

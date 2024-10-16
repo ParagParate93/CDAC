@@ -1,0 +1,65 @@
+1) Write a query that will give you all orders for more than Rs. 1,000.
+
+select * from orders
+    -> where amt>1000;
+	
+2) Write a query that will give you the names and cities of all salespeople in London with a commission above .10.
+
+select sname, city from salespeople
+    -> where city='london' and comm>0.10;
+	
+3) Write a query on the Customers table whose output will exclude all customers with a rating <= 100, unless they are located in Rome.
+
+ SELECT *
+    -> FROM Customers
+    -> WHERE (Rating > 100 OR  city = 'Rome');
+	
++------+----------+----------+--------+------+
+| Cnum | Cname    | City     | Rating | Snum |
++------+----------+----------+--------+------+
+| 2002 | Giovanni | Rome     |    200 | 1003 |
+| 2003 | Liu      | San Jose |    200 | 1002 |
+| 2004 | Grass    | Berlin   |    300 | 1002 |
+| 2007 | Pereira  | Rome     |    100 | 1004 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
++------+----------+----------+--------+------+
+5 rows in set (0.00 sec)
+
+
+4) What will be the output from the following query?
+Select * from Orders
+where (amt < 1000 OR
+NOT (odate = ‘1990-10-03’
+AND cnum > 2003));
+
+Output:
+All records with amt < 1000 will be included.
+Additionally, any record where the order date is not 1990-10-03 or where the customer number is 2003 or less will also be included.
+Records that have odate = '1990-10-03' and cnum > 2003 will be excluded.
+
+5) What will be the output of the following query?
+Select * from Orders
+where NOT ((odate = ‘1990-10-03’ OR snum
+>1006) AND amt >= 1500);
+
+Output:
+The output will include:
+
+All records where the amount (amt) is less than 1500.
+Records where the amount is 1500 or greater but:
+The order date is not 1990-10-03, or
+The serial number is not greater than 1006.
+
+Excluded Records:
+Records that have an order date of 1990-10-03 or a serial number greater than 1006 and an amount of 1500 or greater will be excluded from the result.
+
+
+6) What is a simpler way to write this query?
+Select snum, sname, city, comm From Salespeople where (comm > .12 OR comm <.14);
+
+simpler way:
+Select snum, sname, city, comm From Salespeople;
+or;
+Select * from Salespeople;
+
+
