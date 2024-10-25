@@ -1,4 +1,4 @@
-/* Basic reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     height: 100vh;
 }
 
-/* Main container styling */
+
 .container {
     display: flex;
     width: 80%;
@@ -25,9 +25,9 @@ body {
     overflow: hidden;
 }
 
-/* Left side: Contact info styling */
+
 .contact-info {
-    background: linear-gradient(135deg, #2a56a7, #30d2c3, #f04e82);  /* Matching gradient */
+    background: linear-gradient(135deg, #2a56a7, #30d2c3, #f04e82);  
     color: white;
     padding: 30px;
     flex: 1;
@@ -39,30 +39,30 @@ body {
 .contact-info h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #fff;  /* White color for text */
+    color: #fff;  
 }
 
-/* Updated info item to stack the value below the label */
+
 .info-item {
-    margin-bottom: 20px; /* Spacing between each item */
+    margin-bottom: 20px; 
 }
 
 .info-item strong {
-    margin-bottom: 5px; /* Space between the label and value */
+    margin-bottom: 5px; 
 }
 
 .info-item p {
-    margin-left: 25px; /* Slight indent to match with the icons */
-    color: #fff; /* White color for the text */
+    margin-left: 25px; 
+    color: #fff;
     font-size: 14px;
 }
 
 .contact-info i {
     margin-right: 10px;
-    color: #fff;  /* White color for icons */
+    color: #fff;  
 }
 
-/* Social Media Icons - Centered */
+
 .social-icons {
     margin-top: 20px;
     text-align: center;
@@ -75,7 +75,7 @@ body {
     font-size: 20px;
 }
 
-/* Right side: Contact form styling */
+
 .contact-form {
     padding: 30px;
     flex: 2;
