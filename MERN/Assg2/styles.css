@@ -1,11 +1,11 @@
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Global Styles */
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -13,7 +13,7 @@ body {
     color: #333;
 }
 
-/* Navigation Bar */
+
 .navbar {
     background: linear-gradient(45deg, #4e54c8, #8f94fb);
     color: white;
@@ -57,7 +57,7 @@ body {
     color: white;
 }
 
-/* Hero Section */
+
 .hero {
     padding: 8rem 2rem;
     text-align: center;
@@ -92,7 +92,7 @@ body {
     background-color: #ffc107;
 }
 
-/* Footer */
+
 footer {
     background-color: #333;
     color: white;
@@ -112,7 +112,7 @@ footer {
     color: #ffc107;
 }
 
-/* Animations */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -124,7 +124,7 @@ footer {
     }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
