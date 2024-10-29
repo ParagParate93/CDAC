@@ -1,0 +1,231 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 2rem;
+    text-align: center;
+    background: linear-gradient(120deg, #8f94fb, #4e54c8);
+    color: white;
+    height: 100vh;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+    background-color: #ffd700;
+    color: #4e54c8;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffc107;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 40px;
+}
+
+.social-media a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ffc107;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #4e54c8;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.content-section{
+    margin-top: 140px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.content-section h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #4e54c8;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form label {
+    font-weight: 600;
+    color: #4e54c8;
+    margin-bottom: 0.3rem;
+}
+
+.form input {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form input:focus {
+    border-color: #4e54c8;
+    box-shadow: 0 0 5px rgba(78, 84, 200, 0.2);
+}
+
+#row-container {
+    width: 100%;
+    height: 450px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: "Dancing Script", cursive;;
+ }
+
+ #section-1 {
+    width: 33%;
+    height: inherit;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+ }
+
+ #section-2 {
+    width: 33%;
+    height: inherit;
+    display: inline-block;
+    padding-top: 20px;
+ }
+
+ #section-3 {
+    width: 33.4%;
+    height: inherit;
+    display: inline-block;
+    padding-top: 20px;
+ }
+
+ .btn {
+    background-color: #ffd700;
+    color: #4e54c8;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffc107;
+}
+
