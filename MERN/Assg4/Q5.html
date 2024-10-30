@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body>
+
+</body>
+<script>
+
+function fetchData(url, callback) {
+    setTimeout(() => {
+        const data = `Response from ${url}`;
+        callback(null, data);
+    }, 1000);
+}
+
+function processData(data, callback) {
+    setTimeout(() => {
+        const processedData = `${data} processed`;
+        callback(null, processedData);
+    }, 1000);
+}
+
+fetchData("https://www.google.com", (err, data) => {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log(data);
+        processData(data, (err, processedData) => {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log(processedData);
+            }
+        });
+    }
+});
+
+</script>
+</html>

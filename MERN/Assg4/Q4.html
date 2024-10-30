@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<body>
+
+</body>
+<script>
+
+
+function fetchData(url, callback) {
+    setTimeout(() => {
+
+        const error = Math.random() > 0.5;
+
+        if (error) {
+            callback('Error during data fetch', null);
+        } else {
+            const data = `Response from ${url}`;
+            callback(null, data);
+        }
+    }, 2000);
+}
+fetchData("https://www.google.com", (err, response) => {
+    if (err) {
+        console.error(err); 
+    } else {
+        console.log(response); 
+    }
+});
+
+
+</script>
+</html>
